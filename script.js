@@ -16,13 +16,35 @@ document.querySelectorAll('.reason p').forEach((paragraph, index) => {
 const revealButton = document.getElementById('reveal-gift');
 const concert = document.getElementById('concert');
 const giftIntro = document.getElementById('gift-intro');
-revealButton.addEventListener('click', () => {
+let giftOpening = false;
+revealButton.addEventListener('click', async () => {
+  if (giftOpening) return;
+  giftOpening = true;
+  revealButton.disabled = true;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const giftBox = giftIntro.querySelector('.gift-box');
+  giftIntro.classList.add('is-opening');
+  document.getElementById('gift-status').textContent = 'Abriendo tu regalo…';
+
+  // La tapa lleva consigo el lazo. Sin temporizadores si se pide movimiento reducido.
+  if (!reduceMotion.matches && typeof giftBox.animate === 'function') {
+    const lid = giftBox.querySelector('.gift-lid');
+    const opening = lid.animate([
+      { transform: 'translateY(0) rotate(0)', opacity: 1 },
+      { transform: 'translateY(-22px) rotate(-6deg)', opacity: 1, offset: 0.4 },
+      { transform: 'translate(-12px, -62px) rotate(-14deg)', opacity: 0 }
+    ], { duration: 650, easing: 'ease-in-out', fill: 'forwards' });
+    await opening.finished.catch(() => {});
+  }
+
   concert.hidden = false;
   revealButton.setAttribute('aria-expanded', 'true');
   giftIntro.hidden = true;
+  concert.classList.add('ticket-revealed');
+  document.getElementById('gift-status').textContent = 'Tu regalo: dos entradas VIP para ver a Jay Wheeler, para Flabia y Jesús.';
   concert.focus({ preventScroll: true });
   concert.scrollIntoView({
-    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+    behavior: reduceMotion.matches ? 'instant' : 'smooth',
     block: 'start'
   });
 });

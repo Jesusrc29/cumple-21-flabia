@@ -8,4 +8,92 @@
 .section-entered{animation:section-enter .7s ease-out both}
 /* Las órbitas giradas necesitan medidas relativas para no salir de la pantalla. */
 @media(max-width:1000px){.hero-art .orbit{width:75%;height:65%}.hero-art .orbit-two{width:70%;height:78%}}
+/* Sorpresa: tapa animada y pase conmemorativo reconstruido con texto accesible. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.gift-intro{gap:22px;padding-top:26px}
+.gift-box{margin-bottom:22px}
+.gift-lid{z-index:2;transform-origin:20% 80%}
+.gift-lid:after{content:'';position:absolute;inset:0 auto 0 47px;width:18px;background:#a75e76}
+.gift-lid .bow{top:-29px}
+.gift-lid .bow-left{left:24px}
+.gift-lid .bow-right{right:24px}
+.gift-ribbon{top:0}
+.gift-caption{font-size:21px;text-align:center}
+.gift-intro.is-opening .gift-box{animation:none}
+.gift-intro.is-opening .gift-caption{opacity:.5;transition:opacity .4s}
+.button:disabled{cursor:wait;transform:none;background:#35586c}
+.concert{display:block;max-width:1040px;margin-inline:auto;padding:0;border:0;border-radius:0;background:transparent;scroll-margin-top:24px}
+.memory-ticket{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr) 46px;border:1px solid #bacddc;border-radius:22px;background:var(--paper);box-shadow:0 18px 46px #233f5212;position:relative}
+.ticket-art{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:25px 0 24px;min-width:0;background:radial-gradient(ellipse at 25% 20%,#22445e,#10293f 70%);color:#eaf4fa;border-radius:21px 0 0 21px;overflow:hidden}
+.ticket-art-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-inline:24px;font:italic 22px/1.4 var(--serif);color:#e4edf6}
+.ticket-art-heading span{font-size:25px;color:#c5deee}
+.ticket-art img{width:100%;height:auto;object-fit:contain;mix-blend-mode:lighten}
+.ticket-art-footer{padding-inline:24px;text-align:center;font-size:9px;letter-spacing:2.4px;line-height:1.6}
+.ticket-art-footer span{margin-left:8px;color:#ecc9d4;font-size:17px}
+.ticket-info{position:relative;min-width:0;padding:25px 28px 0;border-left:2px dashed #b5c7d4;background:linear-gradient(135deg,#fffdf9,#f5f0eb);display:flex;flex-direction:column}
+.ticket-info:before,.ticket-info:after{content:'';position:absolute;left:-12px;width:22px;height:22px;background:#f9fcfe;border:1px solid #bacddc;border-radius:50%;z-index:1}
+.ticket-info:before{top:-12px;border-top-color:transparent;border-left-color:transparent;transform:rotate(45deg)}
+.ticket-info:after{bottom:-12px;border-bottom-color:transparent;border-right-color:transparent;transform:rotate(45deg)}
+.ticket-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #bfd0dc;padding-bottom:12px;font-size:10px;letter-spacing:3px}
+.ticket-topline>span:last-child{font-size:29px;line-height:1;color:#7298b4}
+.ticket-info h3{font-family:var(--serif);font-size:clamp(32px,3.5vw,46px);line-height:1.12;letter-spacing:-1.5px;text-transform:uppercase;font-weight:400;margin:22px 0 5px;overflow-wrap:normal}
+.ticket-tour{font-size:11px;letter-spacing:4px;color:var(--muted);margin-bottom:22px}
+.ticket-details{display:grid;gap:15px;margin:0 0 24px}
+.ticket-details>div{position:relative;padding-left:34px}
+.ticket-details dt{font-size:9px;letter-spacing:2px;line-height:1.6;color:var(--muted)}
+.ticket-details dt span{position:absolute;left:0;top:0;font-size:25px;line-height:1.1;color:#547b98}
+.ticket-details dd{margin:3px 0 0;font-size:16px;line-height:1.45}
+.ticket-details strong{font-weight:600}
+.ticket-guests{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:auto;margin-bottom:22px}
+.ticket-guests>div{border:1px solid #a8becd;border-radius:12px;padding:11px 13px}
+.ticket-guests span{display:block;font-size:8px;letter-spacing:1.7px}
+.ticket-guests p{font:italic 32px/1.4 var(--serif);color:#42637e}
+.ticket-together{background:#dcecf6;margin:0 -28px;padding:13px 16px;text-align:center;font-size:8px;letter-spacing:1.7px;line-height:1.7}
+.ticket-together span{color:var(--rose);margin-left:5px}
+.ticket-stub{display:flex;align-items:center;justify-content:center;gap:24px;flex-direction:column;border-left:1px solid #b9cddd;border-radius:0 21px 21px 0;background:#e9f1f6;padding-block:20px}
+.ticket-stub>span:first-child{writing-mode:vertical-rl;font-size:9px;letter-spacing:3px}
+.ticket-stub>span:last-child{font-size:25px;color:var(--rose)}
+.ticket-disclaimer{font-size:10px;text-align:center;color:var(--muted);margin:22px 0;letter-spacing:.35px}
+.ticket-message{position:relative;padding:32px 55px 34px;border:1px solid #d8e4ec;border-radius:6px 6px 20px 20px;background:linear-gradient(120deg,#e6f1f9,#f2f6fb 70%,#f7e9ee);text-align:center}
+.ticket-message-heart{display:block;font-size:27px;line-height:1;color:var(--rose);margin-bottom:14px}
+.ticket-message>p{font-size:16px;line-height:1.9;max-width:750px;margin:auto}
+.ticket-message .handwritten{display:block;margin-top:18px;font-size:22px}
+@keyframes ticket-arrive{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+.ticket-revealed .memory-ticket{animation:ticket-arrive .7s ease-out both}
+.ticket-revealed .ticket-message{animation:ticket-arrive .7s .12s ease-out both}
+@media(max-width:1000px){
+  .memory-ticket{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .ticket-stub{display:none}
+  .ticket-info{border-radius:0 21px 21px 0;padding-inline:22px}
+  .ticket-together{margin-inline:-22px;border-radius:0 0 21px 0}
+  .ticket-art-heading{font-size:20px;padding-inline:20px}
+  .ticket-art-footer{font-size:8px;letter-spacing:1.6px}
+}
+@media(max-width:700px){
+  .concert{padding:0}
+  .memory-ticket{grid-template-columns:minmax(0,1fr);border-radius:18px}
+  .ticket-art{border-radius:17px 17px 0 0;padding-block:18px;gap:16px}
+  .ticket-art-heading{font-size:20px;padding-inline:20px}
+  .ticket-art img{width:min(100%,480px);align-self:center}
+  .ticket-art-footer{font-size:8px;letter-spacing:1.8px}
+  .ticket-info{padding:24px 22px 0;border-left:0;border-top:2px dashed #b5c7d4;border-radius:0 0 17px 17px}
+  .ticket-info:before,.ticket-info:after{top:-12px;bottom:auto}
+  .ticket-info:before{left:-12px;border-color:#bacddc;border-top-color:transparent;border-left-color:transparent;transform:rotate(-45deg)}
+  .ticket-info:after{left:auto;right:-12px;border-color:#bacddc;border-bottom-color:transparent;border-right-color:transparent;transform:rotate(-45deg)}
+  .ticket-topline{font-size:9px;letter-spacing:2.8px}
+  .ticket-info h3{font-size:clamp(30px,8.2vw,42px);letter-spacing:-1px;margin-top:22px}
+  .ticket-tour{font-size:10px;letter-spacing:3px}
+  .ticket-details{gap:18px;margin-bottom:26px}
+  .ticket-details dd{font-size:16px}
+  .ticket-guests{gap:10px}
+  .ticket-guests>div{padding:10px 12px}
+  .ticket-guests span{letter-spacing:1px}
+  .ticket-guests p{font-size:31px}
+  .ticket-together{margin-inline:-22px;padding:14px 18px;font-size:8px;letter-spacing:1.2px;border-radius:0 0 17px 17px}
+  .ticket-disclaimer{font-size:10px;line-height:1.6;margin-block:18px}
+  .ticket-message{padding:28px 22px;border-radius:6px 6px 17px 17px}
+  .ticket-message>p{font-size:14px;line-height:1.95}
+  .ticket-message .handwritten{font-size:20px}
+  .gift-caption{font-size:20px}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}

@@ -14,8 +14,11 @@ Abre `index.html` directamente en el navegador. También puedes servir esta carp
 - `assets/nosotros-sofa.webp`: fotografía completa, sin recorte.
 - `assets/infancia-collage.webp`: collage aportado, con aclaración visible sobre IA.
 - `assets/jay-wheeler-afiche.webp`: afiche aportado, recortado para quitar la interfaz social y sus identificadores.
+- `assets/jay-wheeler-ticket-art.webp`: panel artístico extraído de la nueva referencia. El código de barras del original queda fuera del recurso. Los detalles del pase y los nombres se reconstruyen como texto HTML, sin QR, códigos de barras ni números de compra.
 
 Las imágenes están optimizadas en WebP, conservan sus proporciones y no contienen metadatos personales. Al sustituirlas, actualiza `width`, `height` y `alt` en el HTML. Ajusta el mensaje «Este viernes» si compartes la página en otra fecha.
+
+La sorpresa se abre con «Descubre tu regalo»: se levanta la tapa y aparece un pase conmemorativo para Flabia y Jesús. Con movimiento reducido, se abre inmediatamente. El pase se adapta a una columna en móvil y mantiene el aviso «Pase conmemorativo · No válido para ingresar». El cierre romántico sigue después de la sorpresa.
 
 ## GitHub Pages
 

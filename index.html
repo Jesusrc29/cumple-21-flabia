@@ -59,12 +59,37 @@
     </section>
     <section class="gift-section section-pad" id="cita" aria-labelledby="gift-title">
       <div class="wrap"><div class="section-heading"><p class="eyebrow">04 / GUARDA ESTA FECHA</p><h2 id="gift-title">Una cita <em>pendiente.</em></h2><p>Hay una sorpresa más que quería compartir contigo.</p></div>
-        <div class="gift-intro" id="gift-intro"><div class="gift-box" aria-hidden="true"><span class="bow bow-left"></span><span class="bow bow-right"></span><span class="gift-lid"></span><span class="gift-ribbon"></span><span class="gift-heart">♡</span></div><button class="button" id="reveal-gift" aria-expanded="false" aria-controls="concert">Descubrir nuestra próxima cita <span aria-hidden="true">♡</span></button></div>
-        <div id="concert" class="concert" hidden tabindex="-1" aria-label="Nuestra próxima cita: Jay Wheeler en Lima">
-          <figure class="concert-poster"><img src="./assets/jay-wheeler-afiche.webp" width="828" height="869" alt="Afiche de Jay Wheeler, LWF World Tour. 1 de mayo de 2027, Lima, Costa 21." loading="lazy"></figure>
-          <div class="concert-copy"><span class="ticket-tag">TÚ + YO + NUESTRA MÚSICA</span><h3>Nos vamos a ver a<br><em>Jay Wheeler.</em></h3><dl class="event-details"><div><dt>CUÁNDO</dt><dd>01 de mayo de 2027</dd></div><div><dt>DÓNDE</dt><dd>Lima · Costa 21</dd></div><div><dt>NUESTRA CITA</dt><dd>Dos entradas VIP ♡</dd></div></dl><p>Como sé que tenías muchas ganas de ir a ver a Jay Wheeler, aquí está tu enamorado resolviendo, JAJAJA. Así que separa el 1 de mayo, amor: tenemos una cita ❤️</p><span class="handwritten">Esta vez, cantamos juntos.</span></div>
+        <div class="gift-intro" id="gift-intro">
+          <div class="gift-box" aria-hidden="true"><span class="gift-lid"><span class="bow bow-left"></span><span class="bow bow-right"></span></span><span class="gift-ribbon"></span><span class="gift-heart">♡</span></div>
+          <span class="handwritten gift-caption">Una noche para recordar, contigo.</span>
+          <button class="button" id="reveal-gift" aria-expanded="false" aria-controls="concert">Descubre tu regalo <span aria-hidden="true">♡</span></button>
         </div>
-        <noscript><p class="noscript-note">Nuestra próxima cita: Jay Wheeler · 01 de mayo de 2027 · Lima, Costa 21 · Dos entradas VIP. Activa JavaScript para abrir la sorpresa con su afiche.</p></noscript>
+        <p id="gift-status" class="sr-only" role="status"></p>
+        <div id="concert" class="concert" hidden tabindex="-1" aria-labelledby="ticket-title">
+          <article class="memory-ticket" aria-label="Pase conmemorativo para Flabia y Jesús">
+            <div class="ticket-art">
+              <p class="ticket-art-heading"><span aria-hidden="true">✧</span> Nuestra próxima aventura <span aria-hidden="true">♡</span></p>
+              <img src="./assets/jay-wheeler-ticket-art.webp" width="857" height="600" alt="Ilustración promocional de Jay Wheeler del ticket de referencia, con un arcoíris sobre el rostro y el emblema de LVF." loading="lazy">
+              <p class="ticket-art-footer">TÚ + YO + NUESTRA MÚSICA <span aria-hidden="true">✧</span></p>
+            </div>
+            <div class="ticket-info">
+              <div class="ticket-topline"><span>ENTRADA ESPECIAL</span><span aria-hidden="true">♡</span></div>
+              <h3 id="ticket-title">Jay Wheeler</h3>
+              <p class="ticket-tour">LVF WORLD TOUR</p>
+              <dl class="ticket-details">
+                <div><dt><span aria-hidden="true">◷</span> FECHA</dt><dd><time datetime="2027-05-01">1 de mayo de 2027</time></dd></div>
+                <div><dt><span aria-hidden="true">⌖</span> LUGAR</dt><dd>Costa 21, Lima, Perú</dd></div>
+                <div><dt><span aria-hidden="true">☆</span> EXPERIENCIA</dt><dd>Dos entradas <strong>VIP</strong></dd></div>
+              </dl>
+              <div class="ticket-guests"><div><span>ENTRADA 1 ♡</span><p>Flabia</p></div><div><span>ENTRADA 2 ♡</span><p>Jesús</p></div></div>
+              <p class="ticket-together">Dos entradas. Una experiencia juntos. <span aria-hidden="true">♥</span></p>
+            </div>
+            <div class="ticket-stub" aria-hidden="true"><span>NUESTRA PRÓXIMA AVENTURA</span><span>♡</span></div>
+          </article>
+          <p class="ticket-disclaimer">Pase conmemorativo · No válido para ingresar</p>
+          <div class="ticket-message"><span class="ticket-message-heart" aria-hidden="true">♡</span><p>Como sé que tenías muchas ganas de ir a ver a Jay Wheeler, aquí está tu enamorado resolviendo, JAJAJA. Así que separa el 1 de mayo, amor, porque tenemos una cita. Y esta vez vamos a cantar juntos. ❤️</p><span class="handwritten">Que sea una noche inolvidable.</span></div>
+        </div>
+        <noscript><style>.gift-intro{display:none}</style><p class="noscript-note">Nuestra próxima cita: Jay Wheeler · LVF World Tour · 1 de mayo de 2027 · Costa 21, Lima, Perú · Dos entradas VIP para Flabia y Jesús. Activa JavaScript para abrir el pase conmemorativo.</p></noscript>
       </div>
     </section>
     <section class="letter-section section-pad" id="para-ti" aria-labelledby="letter-title">
